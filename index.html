@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labyrinthe</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #board {
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="select-taille">taille du tableau</label>
+    <select id="select-taille"></select>
+
+    <label for="select-exemple">variante</label>
+    <select id="select-exemple"></select>
+
+    <button id="createLab" type="button">créer le labyrinthe</button>
+    <button id="avancer" type="button">résoudre</button>
+    <script src="Case.js"></script>
+    <script src="Labyrinthe.js"></script>
+    <script src="labyrinthes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
