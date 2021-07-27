@@ -1,7 +1,3 @@
-// const laby = new Labyrinthe(data, 5, 0);
-// console.log(laby.exemple)
-
-// laby.createLab();
 for (i = 3; i <= 25; i++) {
     let option = document.createElement("option");
     option.setAttribute('value', i);
@@ -44,13 +40,13 @@ function resolveLab(position) {
     position.setVisitedTrue();
 
     if (position.end) {
-        position.setbackgroundColor('#EDBB99');
+        position.setbackgroundColor('#E4A3D4');
         goodWay.unshift(position);
         remonter(position);
         console.log(goodWay)
         for (let i = 0; i < goodWay.length; i++) {
             setTimeout(() => {
-                goodWay[i].setbackgroundColor('#CD5C5C')
+                goodWay[i].setbackgroundColor('#B590CA')
             }, 50 * i)
         }
     } else {

@@ -18,26 +18,22 @@ class Case {
 
     checkNeighbours(tab) {
         if (!this.wallUp) {
-            this.neighbours.push(tab[this.posX - 1][this.posY])
+            this.neighbours.push(tab[this.posX][this.posY - 1])
         }
         if (!this.wallRight) {
-            this.neighbours.push(tab[this.posX][this.posY + 1])
-        }
-        if (!this.wallDown) {
             this.neighbours.push(tab[this.posX + 1][this.posY])
         }
+        if (!this.wallDown) {
+            this.neighbours.push(tab[this.posX][this.posY + 1])
+        }
         if (!this.wallLeft) {
-            this.neighbours.push(tab[this.posX][this.posY - 1])
+            this.neighbours.push(tab[this.posX - 1][this.posY])
         }
     }
     createCase() {
         this.carre.style.width = this.tailleCase;
         this.carre.style.height = this.tailleCase;
-        this.carre.style.backgroundColor = '#DCDCDC'
-        // this.carre.style.border = "solid " + this.color;
-        // let w = [this.wallUp, false, true, true];
-        // let border_width = this.walls.map(elt => elt ? "2px" : "0x").join(" ");
-        // this.carre.style.borderWidth = border_width;
+        this.carre.style.backgroundColor = '#C9B6E4'
 
 
         if (this.wallUp) {
@@ -59,7 +55,7 @@ class Case {
     }
     setVisitedTrue() {
         this.visited = true;
-        this.carre.style.backgroundColor = '#FFDAB9'
+        this.carre.style.backgroundColor = '#E1CCEC'
     }
 }
 
@@ -70,7 +66,7 @@ class Start extends Case {
     }
     createCase() {
         super.createCase();
-        this.carre.style.backgroundColor = '#F5F5DC'
+        this.carre.style.backgroundColor = '#F1F1F6'
         return this.carre
     }
 }
@@ -81,7 +77,7 @@ class End extends Case {
     end = true
     createCase() {
         super.createCase();
-        this.carre.style.backgroundColor = '#EDBB99'
+        this.carre.style.backgroundColor = '#EF6C57'
         return this.carre
     }
 }
