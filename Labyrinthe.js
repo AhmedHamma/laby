@@ -1,5 +1,5 @@
 
-const size = 6;
+const size = 22;
 const maze = mazeData[size]["ex-2"]
 let direction;
 let domCell;
@@ -10,7 +10,7 @@ let j = 1;
 const position = (domCell, cell) => {
 
     if (cell.posX == 0 && cell.posY == 0) {
-        domCell.style.backgroundColor = '#05DFD7';
+        domCell.style.backgroundColor = '#B980F0';
 
     }
 }
@@ -38,7 +38,7 @@ function createMaze() {
 
         domCell.style.left = cell.posX * 25 + "px"
         domCell.style.top = cell.posY * 25 + "px"
-        domCell.style.backgroundColor = '#0F3460';
+        domCell.style.backgroundColor = '#0A1931';
 
         if (cell.walls[0]) {
             domCell.style.borderTop = "solid"
