@@ -7,8 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>labyrinthe</title>
     <style>
-        * {
+        .wall {
+            width: 25px;
+            height: 25px;
+            position: absolute;
             box-sizing: border-box;
+
+        }
+
+        body {
+            background-color: rgb(34, 34, 34);
         }
 
         #board {
@@ -27,12 +35,15 @@
     <label for="select-exemple">variante</label>
     <select id="select-exemple"></select>
 
+    <div id="maze"></div>
+    <div id="player"></div>
+
     <button id="createLab" type="button">créer le labyrinthe</button>
     <button id="avancer" type="button">résoudre</button>
-    <script src="Case.js"></script>
-    <script src="Labyrinthe.js"></script>
-    <script src="labyrinthes.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="Case.js"></script> -->
+    <script src="Maze.js"></script>
+    <script src="./Labyrinthe.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>

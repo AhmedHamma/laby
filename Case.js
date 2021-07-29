@@ -77,7 +77,7 @@ class End extends Case {
     end = true
     createCase() {
         super.createCase();
-        this.carre.style.backgroundColor = '#EF6C57'
+        this.carre.style.backgroundColor = '#9B72AA'
         return this.carre
     }
 }
